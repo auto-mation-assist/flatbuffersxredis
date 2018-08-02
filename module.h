@@ -1,10 +1,10 @@
 #include "redismodule.h"
-#include <unordered_map>
-#include <vector>
+//#include <unordered_map>
+//#include <vector>
 //#include "flatbuffers/flatbuffers.h"
 
-std::vector<uint8_t> workingReflectionBuffer;
-std::unordered_map<const char *, std::string> schemaBinaryMap;
+//std::vector<uint8_t> workingReflectionBuffer;
+//std::unordered_map<const char *, std::string> schemaBinaryMap;
 
 // update scalar (no reflection)
 // update container type (vector / string, requires reflection)
@@ -22,6 +22,7 @@ int UpdateScalar(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
 */
 
 // g++ -fPIC -std=gnu++17 -c -o module.o module.h
+// ld -o module.so module.o -shared -Bsymbolic -lc
 
 int RedisModule_OnLoad(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
 
@@ -34,7 +35,7 @@ int RedisModule_OnLoad(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) 
 		printf("argument = %s\n", argument);
   }
 
-  workingReflectionBuffer.reserve(2500U);
+  //workingReflectionBuffer.reserve(2500U);
 
 
   //if (RedisModule_CreateCommand(ctx, "nestedTables.getKey", GetKey, "readonly") == REDISMODULE_ERR) return REDISMODULE_ERR;
