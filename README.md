@@ -1,2 +1,2 @@
-# flatbuffers-redis
-Redis module that allows updates to flatbuffers stored at redis keys
+# flatbuffersxredis
+Redis module that allows you to update flatbuffers stored at redis keys
