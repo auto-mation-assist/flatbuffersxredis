@@ -1,0 +1,6 @@
+.DS_Store
+Dockerfile
+configure.ac
+Makefile
+test/*
+module.so
