@@ -19,10 +19,15 @@ produce a binary version of your flatbuffer schema like so:
     
 then store the binary file in redis at some key.
     
-schema = key at which binary schema is stored\n
-key = key at which flatbuffer you want to update is stored\n
-field = the name of the field you want to update\n
-newValue = the updated value you want to overwrite the field with\n
+    
+schema = key at which binary schema is stored
+
+key = key at which flatbuffer you want to update is stored
+
+field = the name of the field you want to update
+
+newValue = the updated value you want to overwrite the field with
+
 
 command to update scalar field:
 
