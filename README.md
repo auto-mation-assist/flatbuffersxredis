@@ -8,3 +8,7 @@ must compile flatbuffers as shared library and make it run-time visible to the l
 command to compile the module:
 
     g++ -lflatbuffers -fPIC -fconcepts -std=gnu++17 module.c -shared -o module.so
+    
+module can be loaded into redis like such:
+
+    redis-server --loadmodule ./module.so 
